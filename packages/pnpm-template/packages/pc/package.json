@@ -1,0 +1,70 @@
+{
+  "name": "pc",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "serve": "rome serve",
+    "build": "node ./bin/talos_build --no-module",
+    "lint": "rome romeLint --mode production",
+    "check": "rome projectCheck",
+    "lint:style": "rome lint:style --mode production",
+    "rome": "rome list"
+  },
+  "dependencies": {
+    "@vue/composition-api": "1.4.9",
+    "core-js": "^3.6.5",
+    "shared": "workspace:*",
+    "typescript": "4.5.5"
+  },
+  "devDependencies": {
+    "@nibfe/rome-config": "~1.1.0",
+    "@nibfe/tsconfig": "1.0.1",
+    "@nibfe/vue-cli-plugin-project-generator": "^1.6.2",
+    "@rome/bundler-vue-cli-5": "~1.0.2",
+    "@rome/preset-vue-cli-5": "~1.0.0",
+    "@rome/rome": "~0.4.0",
+    "@rome/vue-cli-plugin-vite": "~1.0.1",
+    "@types/node": "17.0.35",
+    "@types/webpack-env": "1.18.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue": "2.6.11",
+    "vue-template-compiler": "2.6.11"
+  },
+  "prettier": "@nibfe/rome-config/dist/prettier",
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "commitlint": {
+    "extends": [
+      "./node_modules/@nibfe/rome-config/dist/commitlint.js"
+    ]
+  },
+  "gitHooks": {
+    "post-merge": "yarn",
+    "pre-commit": "lint-staged && yarn run check",
+    "commit-msg": "commitlint -e $GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue,html}": [
+      "yarn run lint",
+      "git add"
+    ],
+    "*.{vue,htm,html,css,sss,less,scss}": [
+      "rome lint:style",
+      "git add"
+    ]
+  },
+  "stylelint": {
+    "extends": "@nibfe/rome-config/dist/stylelint"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/@nibfe/rome-config/dist/eslint.js"
+  }
+}

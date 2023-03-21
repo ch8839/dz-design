@@ -1,0 +1,45 @@
+{
+  "name": "pnpm-monorepo",
+  "private": true,
+  "description": "",
+  "engines": {
+    "node": ">=12.17.0",
+    "pnpm": ">=6.24.4 <=7.0.0"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "serve:pc": "pnpm serve -F pc",
+    "lint:all": "pnpm -r lint",
+    "clean:all": "pnpm -r exec rm -rf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "*"
+  },
+  "author": "",
+  "devDependencies": {
+    "@nibfe/rome-config": "~1.1.2",
+    "@nibfe/tsconfig": "1.0.1",
+    "yorkie-pnpm": "^2.0.1"
+  },
+  "prettier": "@nibfe/rome-config/dist/prettier",
+  "commitlint": {
+    "extends": [
+      "@nibfe/rome-config/dist/commitlint.js"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -e $GIT_PARAMS",
+    "pre-push": "branchlint"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue,html}": [
+      "pnpm -r lint",
+      "git add"
+    ],
+    "*.{vue,htm,html,css,sss,less,scss}": [
+      "git add"
+    ]
+  }
+}
