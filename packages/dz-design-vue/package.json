@@ -1,6 +1,6 @@
 {
   "name": "@my-test/dz-design-vue",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "module": "index.js",
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "vue-demi": "^0.13.8",
     "@my-test/dz-design-tools": "workspace:0.0.1-beta.1"
   }
 }
