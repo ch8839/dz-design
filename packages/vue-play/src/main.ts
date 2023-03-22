@@ -1,0 +1,19 @@
+import { isVue2 } from 'vue-demi'
+import { createApp as createApp3} from 'vue3'
+import Vue from 'vue2'
+
+import App from 'App.vue'
+import router from 'router'
+
+import './assets/main.css'
+
+if (isVue2) {
+  new Vue({
+    router,
+    render: h => h(App)
+  }).$mount("#app");
+} else {
+  const app = createApp3(App)
+  app.use(router)
+  app.mount('#app')
+}

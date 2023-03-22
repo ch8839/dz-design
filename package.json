@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "get:pnpm-store":"pnpm store path",
-    "pnpm-c":"pnpm -C packages/dz-design-vue run tsc"
+    "pnpm:C":"pnpm -C packages/dz-design-vue run tsc",
+    "pnpm:F":"pnpm -F dz-design-tools run tsc"
   },
   "author": "",
   "license": "ISC",

@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nibfe/dz-design-vue": "workspace:^1.0.0"
+    "@my-test/dz-design-vue": "workspace:^1.0.0"
   }
 }
