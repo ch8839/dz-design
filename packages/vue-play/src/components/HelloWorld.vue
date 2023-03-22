@@ -1,5 +1,10 @@
-<script setup lang="ts">
-
+<script lang="ts">
+import { defineComponent } from 'vue-demi'
+export default defineComponent({
+  props:{
+    msg: String
+  }
+})
 </script>
 
 <template>
