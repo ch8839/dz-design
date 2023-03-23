@@ -2,16 +2,16 @@ import { computed, defineComponent, toRefs, onMounted } from 'vue-demi';
 // import './card.scss';
 
 export default defineComponent({
-  name: 'DZCard',
+  name: 'DZSwitch',
   setup(props: any, { slots }) {
     onMounted(() => {
-      console.log('>>>card')
+      console.log('>>>switch')
     })
   },
   render() {
     return  (
-      <div class={['card-container']}>
-        card
+      <div class={['switch-container']}>
+        switch
       </div>
     );
   }

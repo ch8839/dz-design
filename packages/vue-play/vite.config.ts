@@ -15,7 +15,7 @@ const resolve = (str: string) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: isVue2 ? [createVuePlugin()] :[vue({compiler: compiler}), vueJsx()],
+  plugins: isVue2 ? [createVuePlugin({ jsx: true })] : [vue({ compiler: compiler }), vueJsx()],
   optimizeDeps: {
     exclude: ['vue-demi']
   },

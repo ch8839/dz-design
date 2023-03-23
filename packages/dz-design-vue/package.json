@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue-demi": "^0.13.8",
     "@my-test/dz-design-tools": "workspace:0.0.1-beta.1"
   }
 }

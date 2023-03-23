@@ -16,7 +16,6 @@
   "dependencies": {
     "@my-test/dz-design-vue": "workspace:^0.0.1",
     "@vue/composition-api": "^1.7.0",
-    "vue-demi": "^0.13.8",
     "vue-router2": "npm:vue-router@^3.0.3",
     "vue-router3": "npm:vue-router@^4.1.6"
   },

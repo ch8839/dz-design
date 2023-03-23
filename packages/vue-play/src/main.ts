@@ -1,6 +1,5 @@
-import { isVue2 } from 'vue-demi'
+import { isVue2, Vue } from 'vue-demi'
 import { createApp as createApp3} from 'vue3'
-import Vue from 'vue2'
 
 import App from 'App.vue'
 import router from 'router'
