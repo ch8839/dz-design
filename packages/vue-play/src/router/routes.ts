@@ -1,7 +1,5 @@
 import HomeView from '../views/HomeView.vue'
 
-import Card from '@my-test/dz-design-vue/components/card/demo/test.vue'
-
 function getModules() {
     const components = import.meta.glob('/node_modules/@my-test/dz-design-vue/components/**/demo/test.vue')
     return components
@@ -39,9 +37,6 @@ const routes = [
     {
         path: '/about',
         name: 'about',
-        // route level code-splitting
-        // this generates a separate chunk (About.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('../views/AboutView.vue')
     },
     ...getRouted()
