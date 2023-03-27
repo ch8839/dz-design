@@ -15,7 +15,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@my-test/dz-design-vue": "workspace:^0.0.1",
+    "@my-test/dz-design-vue": "workspace:^0.0.1-beta.0",
     "@vue/composition-api": "^1.7.0",
     "vue-router2": "npm:vue-router@^3.0.3",
     "vue-router3": "npm:vue-router@^4.1.6"

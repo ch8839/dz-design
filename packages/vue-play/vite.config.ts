@@ -19,8 +19,11 @@ export default defineConfig(({mode}) => {
   const env = loadEnv(mode, process.cwd())
   console.log('>>>env', env, mode)
   const dynamicAlias = mode == 'dev'? {
-    '@my-test/dz-design-tools': '@my-test/dz-design-tools/index.ts'
-  } : {}
+    '@components': '@my-test/dz-design-vue/components',
+    '@my-test/dz-design-vue/theme/index.css': '@my-test/dz-design-vue/components/index.scss'
+  } : {
+    '@components': '@my-test/dz-design-vue/es',
+  }
   return {
     plugins: isVue2 ? [createVuePlugin({ jsx: true })] : [vue({ compiler: compiler }), vueJsx()],
     optimizeDeps: {

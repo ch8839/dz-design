@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Card }from '@my-test/dz-design-vue'
+import { Card }from '@components/card'
 import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {
