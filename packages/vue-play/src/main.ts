@@ -5,6 +5,7 @@ import App from 'App.vue'
 import router from 'router'
 
 import './assets/main.css'
+import '@my-test/dz-design-vue/components/index.scss'
 
 if (isVue2) {
   new Vue({

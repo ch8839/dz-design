@@ -9,6 +9,7 @@
     "pnpm:C": "pnpm -C packages/dz-design-vue run tsc",
     "pnpm:F": "pnpm -F dz-design-tools run tsc",
     "dev2": "pnpm -C packages/vue-play run dev2",
+    "dev2:prod": "pnpm -C packages/vue-play run dev2:prod",
     "dev3": "pnpm -C packages/vue-play run dev3"
   },
   "author": "",

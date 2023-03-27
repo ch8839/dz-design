@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router3'
+import Vue from 'vue2'
+import Router from "vue-router2";
 import { routes } from './routes'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: routes
-})
+Vue.use(Router)
 
-export default router
+export default new Router({
+  routes: routes
+});

@@ -1,5 +1,5 @@
 import { computed, defineComponent, toRefs, onMounted } from 'vue-demi';
-import './card.scss';
+// import './index.scss';
 
 export default defineComponent({
   name: 'DZCard',

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../components/switch/index.ts"],"sourcesContent":["import Switch from './swtich'\n\nSwitch.install = function(Vue: any) {\n    Vue.components(Switch)\n}\n\nexport { Switch }\nexport default Switch"],"names":[],"mappings":";AAEA,OAAO,UAAU,SAAS,KAAU;AAChC,MAAI,WAAW,MAAM;AACzB;"}

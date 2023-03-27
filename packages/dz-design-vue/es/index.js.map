@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../index.ts"],"sourcesContent":["import * as components from './components'\n\nconsole.log('>>>components', components)\n\n\nexport * from './components'"],"names":["components"],"mappings":";;;AAEA,QAAQ,IAAI,iBAAiBA,KAAU;"}

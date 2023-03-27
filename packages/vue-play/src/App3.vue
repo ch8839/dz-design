@@ -1,15 +1,9 @@
-<script lang="ts">
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router3'
 import HelloWorld from './components/HelloWorld.vue'
-import { defineComponent } from 'vue-demi'
-export default defineComponent({
-  components: {
-    HelloWorld
-  }
-})
 </script>
 
 <template>
-<div id="app">
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -17,14 +11,13 @@ export default defineComponent({
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
 
-  <router-view />
-  </div>
+  <RouterView />
 </template>
 
 <style scoped>

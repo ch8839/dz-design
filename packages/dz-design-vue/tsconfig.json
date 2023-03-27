@@ -1,23 +1,22 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "outDir": "dist",
-    "module": "CommonJS",
-    "target": "es2016",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
     "jsx": "preserve",
-    "lib": [
-      "DOM",
-      "ES2020"
-    ]
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true, // 允许导入json文件
+    "noImplicitAny": true, // 不允许隐式的 any 类型
+    "declaration": true,
   },
-  // "include": [
-  //   "src"
-  // ]
+  "paths": {
+    // "@my-test/dz-design-vue": "./index.ts"
+  },
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Card } from '../index'
+import { Card }from '@my-test/dz-design-vue'
 import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {
@@ -10,7 +10,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <h2>card test</h2>
+    <h2>card33 test</h2>
     <Card></Card>
   </div>
 </template>
