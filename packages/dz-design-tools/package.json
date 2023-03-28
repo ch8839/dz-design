@@ -28,7 +28,11 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "plop": "^2.7.4",
+    "sass": "^1.59.3",
     "vite": "^4.0.0",
     "vite-plugin-vue2": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.9"
   }
 }

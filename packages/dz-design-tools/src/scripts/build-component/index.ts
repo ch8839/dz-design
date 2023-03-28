@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 import path from 'path'
-import { build, InlineConfig } from 'vite'
+import { build } from 'vite'
 
 import { config } from './config'
 

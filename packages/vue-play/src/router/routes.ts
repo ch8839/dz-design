@@ -1,25 +1,26 @@
 import HomeView from '../views/HomeView.vue'
 
 function getModules() {
-    const components = import.meta.glob('/node_modules/@my-test/dz-design-vue/components/**/demo/test.vue')
+    const components = import.meta.glob('/node_modules/@my-test/dz-design-vue/components/**/demo/*.vue')
     return components
-  }
+}
 
 function getComponentName(path: string) {
-    const reg = /@my-test\/dz-design-vue\/components\/(\w+)\/demo\/test\.vue/
+    const reg = /@my-test\/dz-design-vue\/components\/(\w+)\/demo\/(\w+)\.vue/
     const matchRes = path.match(reg)
-    return matchRes && matchRes[1] || ''
+    return matchRes && { componentName: matchRes[1], demoName: matchRes[2] } || {}
 }
-const getRouted = function(): Array<any> {
+function getRouted(): Array<any> {
     let routes: Array<any> = []
-    const modules = getModules() 
+    const modules = getModules()
+    
     Object.keys(modules).forEach((key: string) => {
-        const ComponentName = getComponentName(key)
-        if(ComponentName) {
+        const { componentName, demoName }= getComponentName(key)
+        if (componentName && demoName) {
             // moduleList[ComponentName] = modules[key]
             routes.push({
-                path: `/${ComponentName}`,
-                name: `${ComponentName}-demo`,
+                path: `/${componentName}/${demoName}`,
+                name: `${componentName}-${demoName}`,
                 component: modules[key]
             })
         }
@@ -27,6 +28,8 @@ const getRouted = function(): Array<any> {
 
     return routes
 }
+
+const componentRoutes = getRouted()
 
 const routes = [
     {
@@ -39,9 +42,10 @@ const routes = [
         name: 'about',
         component: () => import('../views/AboutView.vue')
     },
-    ...getRouted()
+    ...componentRoutes
 ]
 
-export { 
-    routes
+export {
+    routes,
+    componentRoutes
 } 

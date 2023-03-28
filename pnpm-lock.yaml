@@ -14,6 +14,7 @@ importers:
   packages/dz-design-tools:
     specifiers:
       '@types/fs-extra': ^11.0.1
+      '@types/gulp': ^4.0.9
       '@types/gulp-autoprefixer': ^0.0.33
       '@types/gulp-clean-css': ^4.3.0
       '@types/gulp-rename': ^2.0.1
@@ -28,6 +29,7 @@ importers:
       gulp-clean-css: ^4.3.0
       gulp-sass: ^5.1.0
       plop: ^2.7.4
+      sass: ^1.59.3
       vite: ^4.0.0
       vite-plugin-vue2: ^2.0.3
     dependencies:
@@ -46,24 +48,27 @@ importers:
       gulp-clean-css: 4.3.0
       gulp-sass: 5.1.0
       plop: 2.7.6
-      vite: 4.2.1_@types+node@18.15.5
+      sass: 1.59.3
+      vite: 4.2.1_@types+node@18.15.5+sass@1.59.3
       vite-plugin-vue2: 2.0.3_vite@4.2.1
+    devDependencies:
+      '@types/gulp': 4.0.9
 
   packages/dz-design-vue:
     specifiers:
-      '@my-test/dz-design-tools': workspace:0.0.1-beta.1
+      '@my-test/dz-design-tools': workspace:0.0.1-beta.2
     dependencies:
       '@my-test/dz-design-tools': link:../dz-design-tools
 
   packages/dz-design-vue-docs:
     specifiers:
-      '@my-test/dz-design-vue': workspace:^0.0.1
+      '@my-test/dz-design-vue': workspace:^0.0.1-beta.0
     dependencies:
       '@my-test/dz-design-vue': link:../dz-design-vue
 
   packages/vue-play:
     specifiers:
-      '@my-test/dz-design-vue': workspace:^0.0.1
+      '@my-test/dz-design-vue': workspace:^0.0.1-beta.0
       '@rushstack/eslint-patch': ^1.1.4
       '@types/node': ^18.11.12
       '@vitejs/plugin-vue': ^4.0.0
@@ -848,7 +853,6 @@ packages:
 
   /@types/expect/1.20.4:
     resolution: {integrity: sha1-gojlFze/fjq118d7+mlYg3RSZOU=, tarball: '@types/expect/download/@types/expect-1.20.4.tgz'}
-    dev: false
 
   /@types/fined/1.1.3:
     resolution: {integrity: sha1-g/A+jwqNNnPfyvsY/ONXH2JQ4bw=, tarball: '@types/fined/download/@types/fined-1.1.3.tgz'}
@@ -861,12 +865,18 @@ packages:
       '@types/node': 18.15.5
     dev: false
 
+  /@types/glob-stream/6.1.1:
+    resolution: {integrity: sha1-x5LY0VFCeP8DytVomrpMSrT7yAU=, tarball: '@types/glob-stream/download/@types/glob-stream-6.1.1.tgz'}
+    dependencies:
+      '@types/glob': 7.2.0
+      '@types/node': 18.15.5
+    dev: true
+
   /@types/glob/7.2.0:
     resolution: {integrity: sha1-vBtb86qS8lvV3TnzXFc2G9zlsus=, tarball: '@types/glob/download/@types/glob-7.2.0.tgz'}
     dependencies:
       '@types/minimatch': 5.1.2
       '@types/node': 18.15.5
-    dev: false
 
   /@types/gulp-autoprefixer/0.0.33:
     resolution: {integrity: sha1-iuTZDmSrHZywmjIRPS4RzAe7dyk=, tarball: '@types/gulp-autoprefixer/download/@types/gulp-autoprefixer-0.0.33.tgz'}
@@ -894,6 +904,14 @@ packages:
       '@types/node': 18.15.5
       '@types/node-sass': 4.11.2
     dev: false
+
+  /@types/gulp/4.0.9:
+    resolution: {integrity: sha1-ovlme8wmvHK0iZ3RYhbWWEoSNGw=, tarball: '@types/gulp/download/@types/gulp-4.0.9.tgz'}
+    dependencies:
+      '@types/undertaker': 1.2.7
+      '@types/vinyl-fs': 2.4.12
+      chokidar: 3.5.3
+    dev: true
 
   /@types/inquirer/6.5.0:
     resolution: {integrity: sha1-uDsL8wuIuL5yRtQOUdMv6dEOCb4=, tarball: '@types/inquirer/download/@types/inquirer-6.5.0.tgz'}
@@ -928,7 +946,6 @@ packages:
 
   /@types/minimatch/5.1.2:
     resolution: {integrity: sha1-B1CLRXl8uB7D8nMBGwVM0HVe3co=, tarball: '@types/minimatch/download/@types/minimatch-5.1.2.tgz'}
-    dev: false
 
   /@types/node-sass/4.11.2:
     resolution: {integrity: sha1-7NqkShuohHv33qKq2/4zqRomNRQ=, tarball: '@types/node-sass/download/@types/node-sass-4.11.2.tgz'}
@@ -949,12 +966,31 @@ packages:
       '@types/node': 18.15.5
     dev: false
 
+  /@types/undertaker-registry/1.0.1:
+    resolution: {integrity: sha1-QwbUoD16ztuXS2ZTCDK5Bynh0do=, tarball: '@types/undertaker-registry/download/@types/undertaker-registry-1.0.1.tgz'}
+    dev: true
+
+  /@types/undertaker/1.2.7:
+    resolution: {integrity: sha1-icN/075VYUGkCSs4+LxQMHaAPSE=, tarball: '@types/undertaker/download/@types/undertaker-1.2.7.tgz'}
+    dependencies:
+      '@types/node': 18.15.5
+      '@types/undertaker-registry': 1.0.1
+      async-done: 1.3.2
+    dev: true
+
+  /@types/vinyl-fs/2.4.12:
+    resolution: {integrity: sha1-e0Zz2bTVqHTIZS0Q8PAmVHkBTI4=, tarball: '@types/vinyl-fs/download/@types/vinyl-fs-2.4.12.tgz'}
+    dependencies:
+      '@types/glob-stream': 6.1.1
+      '@types/node': 18.15.5
+      '@types/vinyl': 2.0.7
+    dev: true
+
   /@types/vinyl/2.0.7:
     resolution: {integrity: sha1-lzmpoq+vmvMnYcVKDoLHNSefcmw=, tarball: '@types/vinyl/download/@types/vinyl-2.0.7.tgz'}
     dependencies:
       '@types/expect': 1.20.4
       '@types/node': 18.15.5
-    dev: false
 
   /@typescript-eslint/eslint-plugin/5.56.0_98d65c984f5eddf16c91bcdca1de23d4:
     resolution: {integrity: sha1-5Pu01t2Nqz5zNIXBpEoCGJrnU2Q=, tarball: '@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-5.56.0.tgz'}
@@ -1563,12 +1599,11 @@ packages:
     dev: false
 
   /anymatch/3.1.3:
-    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
+    resolution: {integrity: sha1-eQxYsZuhcgqEIFtXxhjVrYUklz4=, tarball: anymatch/download/anymatch-3.1.3.tgz}
     engines: {node: '>= 8'}
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
-    dev: true
 
   /append-buffer/1.0.2:
     resolution: {integrity: sha1-2CIM9GYIFSXv6lBhTz3mUU36WPE=, tarball: append-buffer/download/append-buffer-1.0.2.tgz}
@@ -1677,7 +1712,6 @@ packages:
       once: 1.4.0
       process-nextick-args: 2.0.1
       stream-exhaust: 1.0.2
-    dev: false
 
   /async-each/1.0.3:
     resolution: {integrity: sha1-tyfb+H12UWAvBvTUrDh/R9kbDL8=, tarball: async-each/download/async-each-1.0.3.tgz}
@@ -1754,9 +1788,8 @@ packages:
     dev: false
 
   /binary-extensions/2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
+    resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, tarball: binary-extensions/download/binary-extensions-2.2.0.tgz}
     engines: {node: '>=8'}
-    dev: true
 
   /bindings/1.5.0:
     resolution: {integrity: sha1-EDU8npRTNLwFEabZCzj7x8nFBN8=, tarball: bindings/download/bindings-1.5.0.tgz}
@@ -1956,7 +1989,7 @@ packages:
     dev: false
 
   /chokidar/3.5.3:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
+    resolution: {integrity: sha1-HPN8hwe5Mr0a8a4iwEMuKs0ZA70=, tarball: chokidar/download/chokidar-3.5.3.tgz}
     engines: {node: '>= 8.10.0'}
     dependencies:
       anymatch: 3.1.3
@@ -1968,7 +2001,6 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /class-utils/0.3.6:
     resolution: {integrity: sha1-+TNprouafOAv1B+q0MqDAzGQxGM=, tarball: class-utils/download/class-utils-0.3.6.tgz}
@@ -2674,7 +2706,6 @@ packages:
     resolution: {integrity: sha1-WuZKX0UFe682JuwU2gyl5LJDHrA=, tarball: end-of-stream/download/end-of-stream-1.4.4.tgz}
     dependencies:
       once: 1.4.0
-    dev: false
 
   /error-ex/1.3.2:
     resolution: {integrity: sha1-tKxAZIEH/c3PriQvQovqihTU8b8=, tarball: error-ex/download/error-ex-1.3.2.tgz}
@@ -3704,7 +3735,6 @@ packages:
 
   /immutable/4.3.0:
     resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
-    dev: true
 
   /import-fresh/3.3.0:
     resolution: {integrity: sha1-NxYsJfy566oublPVtNiM4X2eDCs=, tarball: import-fresh/download/import-fresh-3.3.0.tgz}
@@ -3822,11 +3852,10 @@ packages:
     dev: false
 
   /is-binary-path/2.1.0:
-    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
+    resolution: {integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=, tarball: is-binary-path/download/is-binary-path-2.1.0.tgz}
     engines: {node: '>=8'}
     dependencies:
       binary-extensions: 2.2.0
-    dev: true
 
   /is-boolean-object/1.1.2:
     resolution: {integrity: sha1-XG3CACRt2TIa5LiFoRS7H3X2Nxk=, tarball: is-boolean-object/download/is-boolean-object-1.1.2.tgz}
@@ -4990,7 +5019,6 @@ packages:
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha1-eCDZsWEgzFXKmud5JoCufbptf+I=, tarball: process-nextick-args/download/process-nextick-args-2.0.1.tgz}
-    dev: false
 
   /pseudomap/1.0.2:
     resolution: {integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=, tarball: pseudomap/download/pseudomap-1.0.2.tgz}
@@ -5082,11 +5110,10 @@ packages:
     dev: false
 
   /readdirp/3.6.0:
-    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
+    resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, tarball: readdirp/download/readdirp-3.6.0.tgz}
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
-    dev: true
 
   /rechoir/0.6.2:
     resolution: {integrity: sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=, tarball: rechoir/download/rechoir-0.6.2.tgz}
@@ -5304,7 +5331,6 @@ packages:
       chokidar: 3.5.3
       immutable: 4.3.0
       source-map-js: 1.0.2
-    dev: true
 
   /semver-greatest-satisfied-range/1.1.0:
     resolution: {integrity: sha1-E+jCZYq5aRywzXEJMkAoDTb3els=, tarball: semver-greatest-satisfied-range/download/semver-greatest-satisfied-range-1.1.0.tgz}
@@ -5512,7 +5538,6 @@ packages:
 
   /stream-exhaust/1.0.2:
     resolution: {integrity: sha1-rNrI2lnvK8HheiwMz2wyDRIOVV0=, tarball: stream-exhaust/download/stream-exhaust-1.0.2.tgz}
-    dev: false
 
   /stream-shift/1.0.1:
     resolution: {integrity: sha1-1wiCgVWasneEJCebCHfaPDktWj0=, tarball: stream-shift/download/stream-shift-1.0.1.tgz}
@@ -6150,7 +6175,7 @@ packages:
       rollup: 2.79.1
       slash: 3.0.0
       source-map: 0.7.4
-      vite: 4.2.1_@types+node@18.15.5
+      vite: 4.2.1_@types+node@18.15.5+sass@1.59.3
       vue-template-babel-compiler: 1.2.0
     transitivePeerDependencies:
       - arc-templates
@@ -6210,40 +6235,6 @@ packages:
       - whiskers
     dev: false
 
-  /vite/4.2.1_@types+node@18.15.5:
-    resolution: {integrity: sha1-bC6zN7Df2Aqd7VkiFjuUlJ1/wlQ=, tarball: vite/download/vite-4.2.1.tgz}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 18.15.5
-      esbuild: 0.17.12
-      postcss: 8.4.21
-      resolve: 1.22.1
-      rollup: 3.20.0
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: false
-
   /vite/4.2.1_@types+node@18.15.5+sass@1.59.3:
     resolution: {integrity: sha1-bC6zN7Df2Aqd7VkiFjuUlJ1/wlQ=, tarball: vite/download/vite-4.2.1.tgz}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -6277,7 +6268,6 @@ packages:
       sass: 1.59.3
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /vue-demi/0.13.11:
     resolution: {integrity: sha1-fZA2m9rol02HsZc1ZK05AYJBDZk=, tarball: vue-demi/download/vue-demi-0.13.11.tgz}

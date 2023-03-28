@@ -1,5 +1,4 @@
 import { defineComponent, onMounted } from "vue-demi";
-import "./index.scss.js";
 const Switch = defineComponent({
   name: "DZSwitch",
   setup(props, {

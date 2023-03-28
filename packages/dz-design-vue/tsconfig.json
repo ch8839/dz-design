@@ -1,20 +1,8 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
     "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "resolveJsonModule": true, // 允许导入json文件
-    "noImplicitAny": true, // 不允许隐式的 any 类型
-    "declaration": true,
+    // "declaration": true,
     "paths": {
       "@components/*": ["components/*"]
     },

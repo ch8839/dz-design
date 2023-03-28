@@ -1,6 +1,7 @@
 <script lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-import { defineComponent } from "vue-demi";
+// import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from "./components/HelloWorld.vue"
+import { defineComponent } from "vue-demi"
 export default defineComponent({
   components: {
     HelloWorld,
@@ -9,8 +10,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div id="app">
-    <header>
+  <div id="app-container">
+    <router-view />
+    <!-- <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
       <div class="wrapper">
@@ -21,9 +23,9 @@ export default defineComponent({
           <router-link to="/about">About</router-link>
         </nav>
       </div>
-    </header>
+    </header> -->
 
-    <router-view />
+   
   </div>
 </template>
 

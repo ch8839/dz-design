@@ -3,8 +3,6 @@ import { InlineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 
 const entry = path.resolve(process.cwd(), 'index.ts')
-console.log('>>>input', entry)
-
 
 const config: InlineConfig = {
 	build: {
@@ -31,7 +29,7 @@ const config: InlineConfig = {
 				{
 					format: 'umd',
 					dir: 'lib',
-					name:'dz-design-vue',
+					name: 'dz-design-vue',
 					entryFileNames: '[name].js',
 					globals: {
 						vue: 'Vue',

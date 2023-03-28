@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "outDir": "dist",
-    "module": "CommonJS",
-    "target": "es2016",
-    "allowJs": true,
-    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "esnext",
     "baseUrl": ".",
+    "moduleResolution": "Node",
+    "allowJs": true,
     "strict": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true, // 允许导入json文件
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "lib": [
-      "DOM",
-      "ES2020"
-    ]
+    // "noUnusedLocals": true, // 若有未使用的局部变量则抛错
+    "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
   },
-  // "include": [
-  //   "src"
-  // ]
+  "exclude": [
+    "node_modules",
+  ]
 }

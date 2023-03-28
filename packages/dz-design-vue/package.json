@@ -8,13 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "gen:token": "dz-design-tools gen:token",
-    "build:component": "dz-design-tools build:component",
     "gen:style": "dz-design-tools gen:style",
+    "build": "pnpm run build:component && pnpm run build:style",
+    "build:component": "dz-design-tools build:component",
     "build:style": "dz-design-tools build:style"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@my-test/dz-design-tools": "workspace:0.0.1-beta.1"
+    "@my-test/dz-design-tools": "workspace:0.0.1-beta.2"
   }
 }

@@ -1,21 +1,31 @@
 <script lang="ts">
-// import { Card } from '@my-test/dz-design-vue'
-
-import TheWelcome from '../components/TheWelcome.vue'
-import { Card } from '@my-test/dz-design-vue'
 import { defineComponent } from 'vue-demi'
+import { componentRoutes } from '../router/routes'
+
 export default defineComponent({
-  components: {
-    Card,
-    TheWelcome
+  data() {
+    return {
+      componentRoutes
+    }
   }
 })
 </script>
 
 <template>
-  <main>
-    <Card></Card>
-    12
-    <TheWelcome />
+  <main class="main-container">
+    <div v-for="(item, index) of componentRoutes" :key="index" class="link-cell">
+      <router-link :to="item.path">{{ item.name}}</router-link>
+    </div>
   </main>
 </template>
+
+<style lang="scss">
+.main-container {
+  .link-cell {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+  }
+}
+  
+</style>

@@ -1,23 +1,10 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
     "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "resolveJsonModule": true,
     "paths": {
       // "@components/*": ["../components/src/*"],
-      // "@utils/*": ["../components/src/__utils__/*"],
-      // "@tests/*": ["../components/src/__tests__/*"],
-      // "@hooks/*": ["../components/src/hooks/*"]
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    }
   },
   "include": [
     "src/*.d.ts",

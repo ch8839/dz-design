@@ -11,7 +11,7 @@ export default defineComponent({
   render() {
     return  (
       <div class={['card-container']}>
-        card11
+        I'm card
       </div>
     );
   }

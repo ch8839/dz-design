@@ -2,7 +2,6 @@
   typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("vue-demi")) : typeof define === "function" && define.amd ? define(["exports", "vue-demi"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global["dz-design-vue"] = {}, global.vueDemi));
 })(this, function(exports2, vueDemi) {
   "use strict";
-  const index$1 = "";
   const Card = vueDemi.defineComponent({
     name: "DZCard",
     setup(props, {
@@ -16,13 +15,12 @@
       const h = arguments[0];
       return h("div", {
         "class": ["card-container"]
-      }, ["card"]);
+      }, ["card11"]);
     }
   });
   Card.install = function(Vue) {
     Vue.components(Card);
   };
-  const index = "";
   const Switch = vueDemi.defineComponent({
     name: "DZSwitch",
     setup(props, {

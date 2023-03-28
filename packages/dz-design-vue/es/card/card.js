@@ -1,5 +1,4 @@
 import { defineComponent, onMounted } from "vue-demi";
-import "./index.scss.js";
 const Card = defineComponent({
   name: "DZCard",
   setup(props, {
@@ -13,7 +12,7 @@ const Card = defineComponent({
     const h = arguments[0];
     return h("div", {
       "class": ["card-container"]
-    }, ["card"]);
+    }, ["card11"]);
   }
 });
 export {
