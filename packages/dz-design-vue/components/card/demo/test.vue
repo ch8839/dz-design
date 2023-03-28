@@ -10,7 +10,9 @@ export default defineComponent({
 
 <template>
   <div>
-    <h2>card33 test</h2>
-    <Card></Card>
+    <h2>card test</h2>
+    <Card title="卡片1">
+        卡片1内容
+    </Card>
   </div>
 </template>

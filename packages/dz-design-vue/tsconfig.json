@@ -6,6 +6,5 @@
     "paths": {
       "@components/*": ["components/*"]
     },
-  },
- 
+  }
 }
