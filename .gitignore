@@ -13,3 +13,9 @@ dist
 
 # local env files
 tmp
+
+/lib/
+/dist/
+**/dist/
+**/lib/
+**/es/
