@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../../components/card/index.ts"],"sourcesContent":["import Card from './card'\n\nCard.install = function(Vue: any) {\n    Vue.components(Card)\n}\nexport { Card }\n\nexport default Card"],"names":[],"mappings":";AAEA,KAAK,UAAU,SAAS,KAAU;AAC9B,MAAI,WAAW,IAAI;AACvB;"}

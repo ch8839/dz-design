@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue-demi": "^0.13.8"
+    "vue-demi": "^0.13.11"
   },
   "devDependencies": {
     "typescript": "^4.9.5"

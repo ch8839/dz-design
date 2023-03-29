@@ -1,6 +1,6 @@
 {
   "name": "@my-test/dz-design-vue",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.2",
   "description": "",
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -13,10 +13,22 @@
     "build:component": "dz-design-tools build:component",
     "build:style": "dz-design-tools build:style"
   },
+  "files": [
+    "lib",
+    "es",
+    "components",
+    "token-lib",
+    "index.ts"
+  ],
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/theme/*",
+    "*.scss"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@my-test/dz-design-tools": "workspace:0.0.1-beta.2",
-    "@ss/mtd-vue2": "^1.1.2-alpha.8"
+    "@ss/mtd-vue2": "^1.1.2-alpha.13"
   }
 }

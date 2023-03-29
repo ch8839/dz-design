@@ -1,5 +1,4 @@
 import { computed, defineComponent, toRefs, onMounted } from 'vue-demi'
-import '@ss/mtd-vue2/lib/theme-chalk/card.css'
 import Card from '@ss/mtd-vue2/es/card'
 
 import props from './props'

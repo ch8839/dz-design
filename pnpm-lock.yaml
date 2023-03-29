@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       typescript: ^4.9.5
-      vue-demi: ^0.13.8
+      vue-demi: ^0.13.11
     dependencies:
       vue-demi: 0.13.11
     devDependencies:
@@ -57,10 +57,10 @@ importers:
   packages/dz-design-vue:
     specifiers:
       '@my-test/dz-design-tools': workspace:0.0.1-beta.2
-      '@ss/mtd-vue2': ^1.1.2-alpha.8
+      '@ss/mtd-vue2': ^1.1.2-alpha.13
     dependencies:
       '@my-test/dz-design-tools': link:../dz-design-tools
-      '@ss/mtd-vue2': 1.1.2-alpha.8_typescript@4.9.5
+      '@ss/mtd-vue2': 1.1.2-alpha.13_typescript@4.9.5
 
   packages/dz-design-vue-docs:
     specifiers:
@@ -862,8 +862,8 @@ packages:
       - vue
     dev: false
 
-  /@ss/mtd-vue2/1.1.2-alpha.8_typescript@4.9.5:
-    resolution: {integrity: sha1-GLAZJFB9sCs+EELvouYW7+TLgUY=, tarball: '@ss/mtd-vue2/download/@ss/mtd-vue2-1.1.2-alpha.8.tgz'}
+  /@ss/mtd-vue2/1.1.2-alpha.13_typescript@4.9.5:
+    resolution: {integrity: sha1-eVi115OknvQJQLDn+4dxfcqJnjA=, tarball: '@ss/mtd-vue2/download/@ss/mtd-vue2-1.1.2-alpha.13.tgz'}
     dependencies:
       '@babel/runtime': 7.21.0
       '@ss/mtd-adapter-vue2': 1.0.13-alpha.6
@@ -1454,7 +1454,7 @@ packages:
       source-map: 0.6.1
       vue-template-es2015-compiler: 1.9.1
     optionalDependencies:
-      prettier: 2.8.6
+      prettier: 2.8.7
     transitivePeerDependencies:
       - arc-templates
       - atpl
@@ -5296,6 +5296,12 @@ packages:
     resolution: {integrity: sha1-XBdLKb79UH8UuD48Gfg/3A6XS3E=, tarball: prettier/download/prettier-2.8.6.tgz}
     engines: {node: '>=10.13.0'}
     hasBin: true
+
+  /prettier/2.8.7:
+    resolution: {integrity: sha1-u3n8hykwhUnSj+Opj85z0sBlZFA=, tarball: prettier/download/prettier-2.8.7.tgz}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    optional: true
 
   /pretty-hrtime/1.0.3:
     resolution: {integrity: sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=, tarball: pretty-hrtime/download/pretty-hrtime-1.0.3.tgz}

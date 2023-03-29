@@ -17,7 +17,7 @@ const config: InlineConfig = {
 			name: 'dz-design-vue'
 		},
 		rollupOptions: {
-			external: ["vue", "vue-demi"],
+			external: ['vue', 'vue-demi', '@vue/composition-api', '@ss/mtd-vue2'],
 			output: [
 				{
 					format: 'es',

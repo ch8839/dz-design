@@ -18,9 +18,3 @@ declare module '@vue/composition-api' {
     [x: string]: any;
   }
 }
-
-declare module 'vue' {
-  interface VueConstructor {
-    _installedPlugins: PluginObject<any>[];
-  }
-}

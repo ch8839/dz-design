@@ -7,7 +7,8 @@ import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 
 const { existsSync, emptyDir, mkdirSync } = fs
-const componentsPath = resolve(__dirname, '../../../../dz-design-vue')
+// const componentsPath = resolve(__dirname, '../../../../dz-design-vue')
+const componentsPath = resolve(process.cwd())
 
 const libCssDir = resolve(componentsPath, 'lib/theme')
 const themesDir = resolve(__dirname, 'themes')

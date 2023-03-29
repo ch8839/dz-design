@@ -4,10 +4,12 @@ import { createApp as createApp3} from 'vue3'
 import App from './App.vue'
 import router from 'router'
 
+
 import './assets/main.css'
 import '@my-test/dz-design-vue/lib/theme/index.css'
 
 if (isVue2) {
+ 
   new Vue({
     router,
     render: h => h(App)
