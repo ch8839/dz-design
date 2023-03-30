@@ -21,10 +21,10 @@ export default defineConfig(({ mode }) => {
   const dynamicAlias = mode == 'development' ?
     {
       '@components': '@my-test/dz-design-vue/components',
-      '@my-test/dz-design-vue/lib/theme/index.css': '@my-test/dz-design-vue/components/index.scss'
+      '@my-test/dz-design-vue/dist/theme/index.css': '@my-test/dz-design-vue/components/index.scss'
     } :
     {
-      '@components': '@my-test/dz-design-vue/es',
+      '@components': '@my-test/dz-design-vue',
     }
     
   return {

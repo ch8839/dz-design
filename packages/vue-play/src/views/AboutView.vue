@@ -2,7 +2,7 @@
   <div class="about">
     <div class="left-container">
       <h1>This is an about page</h1>
-      <Card></Card>
+      <Card title="title">hello</Card>
     </div>
 
     <TheWelcome />

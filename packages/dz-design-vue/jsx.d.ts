@@ -13,8 +13,8 @@ declare global {
   }
 }
 
-declare module '@vue/composition-api' {
-  interface ComponentInternalInstance { // todo
-    [x: string]: any;
-  }
-}
+// declare module '@vue/composition-api' {
+//   interface ComponentInternalInstance { // todo
+//     [x: string]: any;
+//   }
+// }

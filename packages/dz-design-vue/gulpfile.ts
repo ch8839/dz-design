@@ -10,21 +10,23 @@ const { existsSync, emptyDir, mkdirSync } = fs
 // const componentsPath = resolve(__dirname, '../../../../dz-design-vue')
 const componentsPath = resolve(process.cwd())
 
-const libCssDir = resolve(componentsPath, 'lib/theme')
+const cssDir = resolve(componentsPath, 'dist/theme')
 const themesDir = resolve(__dirname, 'themes')
 
 function buildStyle() {
-  ensureEmptyDir(libCssDir)
+  ensureEmptyDir(cssDir)
 
   const sass = gulpSass(dartSass)
 
   const filePath = [resolve(componentsPath, 'components', '**/index.scss'), resolve(componentsPath, 'components/index.scss')]
 
   return src(filePath)
-    .pipe(sass.sync())
+    .pipe(sass.sync({
+      includePaths: ['node_modules']
+    }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
-    .pipe(dest(libCssDir))
+    .pipe(dest(cssDir))
 }
 
 function buildThemes() {
@@ -34,7 +36,9 @@ function buildThemes() {
   const sass = gulpSass(dartSass)
 
   return src(resolve(__dirname, 'style/dark/*.scss'))
-    .pipe(sass.sync())
+    .pipe(sass.sync({
+      includePaths: ['node_modules']
+    }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
     .pipe(dest(resolve(themesDir, 'dark')))
@@ -43,5 +47,5 @@ function buildThemes() {
 export default parallel(buildStyle)
 
 function ensureEmptyDir(dir: string) {
-  existsSync(dir) ? emptyDir(dir) : mkdirSync(dir)
+  existsSync(dir) && mkdirSync(dir)
 }

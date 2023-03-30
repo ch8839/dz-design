@@ -1,11 +1,11 @@
 import { computed, defineComponent, toRefs, onMounted } from "vue-demi"
-import Switch from "@ss/mtd-vue2/es/switch"
+import { Switch } from "@ss/mtd-vue2"
 
 import props from "./props"
 // import './index.scss';
 
 export default defineComponent({
-  name: "DZSwitch",
+  name: "DzSwitch",
   components: {
     "mtd-switch": Switch,
   },
