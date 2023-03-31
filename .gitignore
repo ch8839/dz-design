@@ -8,16 +8,5 @@ node_modules
 # System
 .DS_Store
 
-# Bundle
-dist
-lib
-es
-
 # local env files
 tmp
-
-/lib/
-/dist/
-**/dist/
-**/lib/
-**/es/

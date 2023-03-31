@@ -9,9 +9,9 @@ node_modules
 .DS_Store
 
 # Bundle
-dist
-lib
-es
+dist/
+lib/
+es/
 
 # local env files
 tmp
