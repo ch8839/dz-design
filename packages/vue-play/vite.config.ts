@@ -20,11 +20,11 @@ export default defineConfig(({ mode }) => {
   console.log('>>>env', env, mode)
   const dynamicAlias = mode == 'development' ?
     {
-      '@components': '@my-test/dz-design-vue/components',
+      '@component': '@my-test/dz-design-vue/components',
       '@my-test/dz-design-vue/dist/theme/index.css': '@my-test/dz-design-vue/components/index.scss'
     } :
     {
-      '@components': '@my-test/dz-design-vue',
+      "@component": "@my-test/dz-design-vue/es"
     }
     
   return {
@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => {
         '@vue/composition-api': resolve('./node_modules/@vue/composition-api'),
         'vue-router': isVue2 ? 'vue-router2' : 'vue-router3',
         'router': isVue2 ? resolve('./src/router/index.ts') : resolve('./src/router/index3.ts'),
+        // 'vue-demi': resolve('./node_modules/@my-test/dz-design-vue/node_modules/vue-demi')
       }, dynamicAlias)
     }
   }

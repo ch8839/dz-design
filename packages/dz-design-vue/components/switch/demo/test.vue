@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Switch }from '@components/switch'
+import Switch from '@component/switch'
 import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {

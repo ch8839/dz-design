@@ -4,7 +4,7 @@
     "jsx": "preserve",
     // "declaration": true,
     "paths": {
-      "@components/*": ["components/*"]
+      "@component/*": ["components/*"]
     },
   }
 }

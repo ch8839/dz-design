@@ -1,6 +1,6 @@
 {
   "name": "@my-test/dz-design-vue",
-  "version": "0.0.1-beta.6",
+  "version": "0.0.1-beta.11",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,14 +23,19 @@
     "index.ts"
   ],
   "sideEffects": [
-    "es/**/style/*",
-    "lib/theme/*",
     "*.scss"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@my-test/dz-design-tools": "workspace:*",
-    "@ss/mtd-vue2": "1.2.0-alpha.13"
+    "@ss/mtd-vue2": "1.2.0-alpha.13",
+    "@vue/composition-api": "^1.7.0",
+    "vue-demi": "^0.13.11"
+  },
+  "devDependencies": {
+    "@my-test/dz-design-tools": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0 || >=3.0.0"
   }
 }

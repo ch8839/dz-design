@@ -1,5 +1,6 @@
 <script lang="ts">
-import { Card }from '@components/card'
+import Card from '@component/card'
+console.log('>>>card', Card)
 import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {

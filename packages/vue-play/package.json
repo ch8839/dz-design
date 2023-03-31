@@ -16,19 +16,10 @@
   },
   "dependencies": {
     "@my-test/dz-design-vue": "workspace:^0.0.1-beta.6",
-    "@ss/mtd-vue2": "1.2.0-alpha.13",
     "@vue/composition-api": "^1.7.0",
+    "vue-demi": "^0.13.11",
     "vue-router2": "npm:vue-router@^3.0.3",
     "vue-router3": "npm:vue-router@^4.1.6"
-  },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.7.0",
-    "vue": "^2.0.0 || >=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
