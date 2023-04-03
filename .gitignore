@@ -10,3 +10,8 @@ node_modules
 
 # local env files
 tmp
+
+# Bundle
+dist/
+lib/
+es/

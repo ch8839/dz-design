@@ -34,5 +34,11 @@
       "@vue/composition-api": "^1.7.0",
       "vue-demi": "^0.13.11"
     }
+  },
+  "lint-staged": {
+    "packages/**/{*.vue,*.js,*.ts,*.jsx,*.tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
