@@ -10,9 +10,9 @@ export function install(vue: typeof Vue) {
 }
 
 if (typeof window !== 'undefined' && (window as any).Vue) {
-  install((window as any).Vue);
+  install((window as any).Vue)
 }
 
 export default {
-  install,
+  install
 }
