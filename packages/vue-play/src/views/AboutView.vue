@@ -16,7 +16,7 @@ import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {
     Card,
-    TheWelcome
+    TheWelcome,
   },
 })
 </script>

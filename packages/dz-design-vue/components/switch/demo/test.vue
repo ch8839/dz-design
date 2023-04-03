@@ -3,14 +3,14 @@ import Switch from '@component/switch'
 import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {
-    'dz-switch':Switch
+    'dz-switch': Switch,
   },
   data() {
     return {
       value1: true,
-      value2: true
+      value2: true,
     }
-  }
+  },
 })
 </script>
 

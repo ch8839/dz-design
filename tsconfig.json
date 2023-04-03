@@ -11,9 +11,7 @@
     "esModuleInterop": true,
     // "noUnusedLocals": true, // 若有未使用的局部变量则抛错
     "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "exclude": [
-    "node_modules",
-  ]
+  "exclude": ["node_modules"]
 }

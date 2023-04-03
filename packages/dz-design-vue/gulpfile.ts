@@ -18,12 +18,17 @@ function buildStyle() {
 
   const sass = gulpSass(dartSass)
 
-  const filePath = [resolve(componentsPath, 'components', '**/index.scss'), resolve(componentsPath, 'components/index.scss')]
+  const filePath = [
+    resolve(componentsPath, 'components', '**/index.scss'),
+    resolve(componentsPath, 'components/index.scss'),
+  ]
 
   return src(filePath)
-    .pipe(sass.sync({
-      includePaths: ['node_modules']
-    }))
+    .pipe(
+      sass.sync({
+        includePaths: ['node_modules'],
+      })
+    )
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
     .pipe(dest(cssDir))
@@ -36,9 +41,11 @@ function buildThemes() {
   const sass = gulpSass(dartSass)
 
   return src(resolve(__dirname, 'style/dark/*.scss'))
-    .pipe(sass.sync({
-      includePaths: ['node_modules']
-    }))
+    .pipe(
+      sass.sync({
+        includePaths: ['node_modules'],
+      })
+    )
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
     .pipe(dest(resolve(themesDir, 'dark')))

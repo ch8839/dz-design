@@ -8,10 +8,7 @@ import buildComponent from './scripts/build-component'
 import genFullStyle from './scripts/gen-full-style'
 import buildStyle from './scripts/build-style'
 
-const packageContent = fs.readFileSync(
-  path.resolve(__dirname, '../package.json'),
-  'utf8'
-)
+const packageContent = fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8')
 const version: string = JSON.parse(packageContent).version
 
 const program = new Command()

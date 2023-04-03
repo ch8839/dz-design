@@ -1,6 +1,6 @@
 {
   "name": "vue-vite-pnpm",
-  "private":"true",
+  "private": "true",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,13 +11,22 @@
     "pnpm:F": "pnpm -F dz-design-tools run tsc",
     "dev2": "pnpm -C packages/vue-play run dev2",
     "dev2:prod": "pnpm -C packages/vue-play run dev2:prod",
-    "dev3": "pnpm -C packages/vue-play run dev3"
+    "dev3": "pnpm -C packages/vue-play run dev3",
+    "lint": "eslint --cache --ext .vue,.js,.ts,.tsx ./ --max-warnings 0",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.2.1",
+    "@nibfe/rome-config": "1.0.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^7.7.0",
     "gulp": "^4.0.2",
+    "husky": "^8.0.3",
+    "prettier": "^2.7.1",
+    "lint-staged": "^10.2.10",
     "typescript": "^4.9.5"
   },
   "pnpm": {
@@ -26,6 +35,4 @@
       "vue-demi": "^0.13.11"
     }
   }
- 
-  
 }

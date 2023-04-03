@@ -1,11 +1,9 @@
+## 添加子 repo
 
-## 添加子repo
-
-``` sh
+```sh
 mkdir packages/repo
 ```
 
-``` sh
+```sh
 cd packages/repo && yarn create @rome/app
 ```
-

@@ -5,16 +5,16 @@ import { componentRoutes } from '../router/routes'
 export default defineComponent({
   data() {
     return {
-      componentRoutes
+      componentRoutes,
     }
-  }
+  },
 })
 </script>
 
 <template>
   <main class="main-container">
     <div v-for="(item, index) of componentRoutes" :key="index" class="link-cell">
-      <router-link :to="item.path">{{ item.name}}</router-link>
+      <router-link :to="item.path">{{ item.name }}</router-link>
     </div>
   </main>
 </template>
@@ -27,5 +27,4 @@ export default defineComponent({
     padding: 10px;
   }
 }
-  
 </style>

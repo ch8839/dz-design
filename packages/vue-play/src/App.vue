@@ -1,12 +1,12 @@
 <script lang="ts">
 // import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from "./components/HelloWorld.vue"
-import { defineComponent } from "vue-demi"
+import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue-demi'
 export default defineComponent({
   components: {
     HelloWorld,
   },
-});
+})
 </script>
 
 <template>
@@ -24,8 +24,6 @@ export default defineComponent({
         </nav>
       </div>
     </header> -->
-
-   
   </div>
 </template>
 

@@ -6,11 +6,5 @@
       // "@components/*": ["../components/src/*"],
     }
   },
-  "include": [
-    "src/*.d.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "vite.config.ts"
-  ],
+  "include": ["src/*.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vite.config.ts"]
 }
