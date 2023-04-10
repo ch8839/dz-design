@@ -1,0 +1,10 @@
+// @import '@ss/mtd-vue2/lib/theme-chalk/switch';
+@import '../../../theme/common.scss';
+.switch-container {
+  background: rgb(235, 216, 181);
+  border-radius: 10px;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  color: $color1;
+}

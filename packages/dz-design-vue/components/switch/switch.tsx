@@ -1,14 +1,13 @@
 import { computed, defineComponent, toRefs, onMounted } from 'vue-demi'
-import { Switch } from '@ss/mtd-vue2'
 
 import props from './props'
-// import './index.scss';
+import './index.scss';
 
 export default defineComponent({
   name: 'DzSwitch',
-  components: {
-    'mtd-switch': Switch,
-  },
+  // components: {
+  //   'mtd-switch': Switch,
+  // },
   model: {
     prop: 'modelValue',
     event: 'update:modelValue',
@@ -31,14 +30,7 @@ export default defineComponent({
 
     return (
       <div class={['switch-container']}>
-        <mtd-switch
-          modelValue={modelValue}
-          size={size}
-          loading={loading}
-          // onInput={changeValue}
-          {...{ on: { 'update:modelValue': changeValue } }}
-          disabled={disabled}
-        ></mtd-switch>
+        switch
       </div>
     )
   },

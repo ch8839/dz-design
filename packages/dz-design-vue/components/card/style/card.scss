@@ -1,0 +1,8 @@
+// @import '@ss/mtd-vue2/lib/theme-chalk/card';
+@import '../../../theme/common.scss';
+.card-container {
+  display: inline-block;
+  width: 400px;
+  text-align: center;
+  color: $color1;
+}

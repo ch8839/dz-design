@@ -1,14 +1,13 @@
 import { computed, defineComponent, toRefs, onMounted } from 'vue-demi'
-import { Card } from '@ss/mtd-vue2'
 
 import props from './props'
-// import './index.scss';
+import './index.scss';
 
 export default defineComponent({
   name: 'DzCard',
-  components: {
-    Card,
-  },
+  // components: {
+  //   Card,
+  // },
   props: props,
   setup(props: any, { slots }: any) {
     onMounted(() => {
@@ -19,7 +18,7 @@ export default defineComponent({
     const { title } = this
     return (
       <div class={['card-container']}>
-        <Card title={title}>{this.$slots.default}</Card>
+        card
       </div>
     )
   },

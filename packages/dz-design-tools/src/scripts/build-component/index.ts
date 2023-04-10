@@ -2,14 +2,16 @@ import fs from 'fs-extra'
 import path from 'path'
 import { build } from 'vite'
 
-import { esConfig, umdConfig } from './config'
+import { esConfig, umdConfig, themeConfig, themeConfig2 } from './config'
 
 async function runBuild() {
   await fs.emptyDir(path.resolve(process.cwd(), 'es'))
   await fs.emptyDir(path.resolve(process.cwd(), 'lib'))
   await fs.emptyDir(path.resolve(process.cwd(), 'dist'))
-  await build(esConfig)
-  await build(umdConfig)
+  // await build(esConfig)
+  // await build(umdConfig)
+  await build(themeConfig)
+  await build(themeConfig2)
 }
 
 export default runBuild
