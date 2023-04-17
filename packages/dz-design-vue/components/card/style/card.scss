@@ -1,8 +1,12 @@
 // @import '@ss/mtd-vue2/lib/theme-chalk/card';
-@import '../../../theme/common.scss';
+@import '../../../style/index';
+
 .card-container {
   display: inline-block;
   width: 400px;
   text-align: center;
   color: $color1;
+  background-color: var(--dz-color-primary-default);
+  transition :transform 1s;
+  border-radius: 5px
 }

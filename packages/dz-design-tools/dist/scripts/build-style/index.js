@@ -8,15 +8,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const child_process_1 = require("child_process");
+const fs_extra_1 = __importDefault(require("fs-extra"));
+const path_1 = __importDefault(require("path"));
+const vite_1 = require("vite");
+const config_1 = require("./config");
 function buildStyle() {
     return __awaiter(this, void 0, void 0, function* () {
-        // execSync('pnpm run gulp', { cwd: path.resolve(__dirname), stdio: 'inherit' })
-        (0, child_process_1.execSync)('gulp --require @esbuild-kit/cjs-loader', {
-            cwd: process.cwd(),
-            stdio: 'inherit',
-        });
+        // ensureDir 
+        yield fs_extra_1.default.ensureDir(path_1.default.resolve(process.cwd(), 'dist/style'));
+        yield fs_extra_1.default.ensureDir(path_1.default.resolve(process.cwd(), 'es'));
+        yield fs_extra_1.default.ensureDir(path_1.default.resolve(process.cwd(), 'lib'));
+        yield (0, vite_1.build)(config_1.styleConfig);
+        yield (0, vite_1.build)(config_1.styleConfig2);
+        yield (0, vite_1.build)(config_1.themeConfig);
     });
 }
 exports.default = buildStyle;

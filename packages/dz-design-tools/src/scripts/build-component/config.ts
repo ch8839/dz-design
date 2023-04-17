@@ -75,12 +75,11 @@ const umdConfig: InlineConfig = mergeConfig(baseConfig, {
   },
 })
 
-const themeConfig = {
+const themeConfig: InlineConfig = {
   build: {
     cssCodeSplit: true,
     lib: {
-      entry: path.resolve(process.cwd(), "components/theme.ts"),
-      name: "MyCssLib",
+      entry: path.resolve(process.cwd(), 'components/theme.ts'),
       fileName: 'my-lib',
     },
     rollupOptions: {
@@ -91,29 +90,28 @@ const themeConfig = {
           // entryFileNames: '[name].js',
           preserveModules: true,
           preserveModulesRoot: 'components',
-        }]
+        },
+      ],
     },
     // outDir:  path.resolve(process.cwd(), "cssLib")
   },
 }
-const themeConfig2 = {
+const themeConfig2: InlineConfig = {
   build: {
     emptyOutDir: false,
     lib: {
-      entry: path.resolve(process.cwd(), "components/theme.ts"),
+      entry: path.resolve(process.cwd(), 'components/theme.ts'),
       formats: ['es'],
       fileName: 'my-lib',
     },
     rollupOptions: {
       output: [
         {
-         
-        
           assetFileNames: 'index.css',
-        
-        }]
+        },
+      ],
     },
-    outDir:  path.resolve(process.cwd(), "cssLib")
+    outDir: path.resolve(process.cwd(), 'cssLib'),
   },
 }
 

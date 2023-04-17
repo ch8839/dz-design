@@ -1,12 +1,18 @@
-import { execSync } from 'child_process'
+import fs from 'fs-extra'
 import path from 'path'
+import { build } from 'vite'
+
+import { styleConfig, styleConfig2, themeConfig } from './config'
 
 async function buildStyle() {
-  // execSync('pnpm run gulp', { cwd: path.resolve(__dirname), stdio: 'inherit' })
-  execSync('gulp --require @esbuild-kit/cjs-loader', {
-    cwd: process.cwd(),
-    stdio: 'inherit',
-  })
+  // ensureDir
+  await fs.ensureDir(path.resolve(process.cwd(), 'dist/style'))
+  await fs.ensureDir(path.resolve(process.cwd(), 'es'))
+  await fs.ensureDir(path.resolve(process.cwd(), 'lib'))
+
+  await build(styleConfig)
+  await build(styleConfig2)
+  await build(themeConfig)
 }
 
 export default buildStyle

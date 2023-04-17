@@ -83,7 +83,6 @@ const themeConfig = {
         cssCodeSplit: true,
         lib: {
             entry: path_1.default.resolve(process.cwd(), "components/theme.ts"),
-            name: "MyCssLib",
             fileName: 'my-lib',
         },
         rollupOptions: {
